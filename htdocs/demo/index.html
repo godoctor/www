@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Online Demonstration | Go Doctor - The Golang Refactoring Engine</title>
+  <script language="JavaScript">
+    var GODOCTOR_VERSION = 'FIXME';
+    var EDITOR_VERSION = 'ACE Editor\n'
+                       + 'http://ace.ajax.org/';
+    var MENU_VERSION   = 'Tigra Menu\n'
+                       + 'http://www.softcomplex.com/products/tigra_menu/';
+    var JQUERY_VERSION = 'jQuery\n'
+                       + 'http://www.jquery.com/';
+  </script>
+  <link rel="stylesheet" href="include/demo.css" />
+  <link rel="stylesheet" href="include/menu.css" />
+  <script language="JavaScript" src="lib/menu.js"></script>
+  <script language="JavaScript" src="include/menu_items.js"></script>
+  <script language="JavaScript" src="include/menu_tpl.js"></script>
+  <script language="JavaScript" src="lib/jquery-2.0.3.min.js"></script>
+  <script language="JavaScript" src="include/godoctor.js"></script>
+</head>
+<body>
+  <!-- jQueryUI stuff-->
+  <script src="http://malsup.github.io/jquery.blockUI.js"></script>
+  <div id="menuBar"></div>
+  <!-- ACE Editor - http://ace.ajax.org/ -->
+  <div id="editor"></div>
+<script src="lib/ace2/ace.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/chaos");
+  editor.getSession().setMode("ace/mode/golang");
+  editor.getSession().setTabSize(4);
+  editor.getSession().setUseSoftTabs(false);
+  editor.getSession().setUseWrapMode(false);
+  editor.setShowPrintMargin(false);
+  editor.renderer.setShowGutter(true);
+  editor.setHighlightSelectedWord(false);
+  editor.setShowInvisibles(false);
+</script>
+<div id="rightSide"></div>
+<script language="JavaScript">
+  openExample('Hello World.go');
+  loadMenu();
+</script>
+</body>
+</html>

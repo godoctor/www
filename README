@@ -1,0 +1,14 @@
+			    GOREFACTOR.ORG WEB SITE
+		(including online documentation and online demo)
+
+1. go install github.com/godoctor/godoctor/cmd/godoctor
+	Make sure the latest version of the Go Doctor is installed before
+	generating the man page in the next step.
+
+2. cd generated && make && cd ..
+	The Makefile will use the godoctor command to generate the man page and
+	Vim plugin documentation and convert it to HTML (using groff and vim,
+	respectively)
+
+3. cd appengine && goapp serve
+	Run the local (development) App Engine server

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Documentation | Go Doctor - The Golang Refactoring Engine</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="layout.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .clicktoshow {
+      display: show;
+      //float: right;
+      font-size: 10px;
+      font-weight: normal;
+      color: #808080;
+    }
+
+    .showable {
+      display: none;
+    }
+
+    .man h1 {
+      text-align: center;
+      font-size: 1.8em;
+      line-height: 1em;
+      font-weight: bold;
+      padding: 3px 0 3px 0;
+      margin-top: 5px;
+    }
+
+    .man h2 {
+      text-align: left;
+      font-size: 1.4em;
+      line-height: 1em;
+      font-weight: bold;
+      padding: 3px 0 3px 0;
+      margin-top: 20px;
+    }
+
+    .vimdoc { font-family: monospace; color: #d0d0d0; }
+    .vimdoc pre { white-space: pre-wrap; font-family: monospace; color: #d0d0d0; }
+    .Identifier { color: #ff8700; font-weight: bold; }
+    .Ignore { color: #808080; padding-bottom: 1px; }
+    .PreProc { color: #87ff00; }
+    .String { color: #afaf87; }
+    .Comment { color: #5f5f5f; }
+    .Statement { color: #d7005f; font-weight: bold; }
+  </style>
+  <script language="JavaScript">
+    function setDisplay(selectors, value) {
+      var divs = document.querySelectorAll(selectors);
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].style.display = value;
+      }
+    }
+
+    function show(id) {
+      setDisplay('.showable', 'none');
+      setDisplay('.clicktoshow', 'block');
+      document.getElementById(id).style.display = 'block';
+      document.getElementById(id + '-click').style.display = 'none';
+    }
+
+    function showAll() {
+      setDisplay('.showable', 'block');
+      setDisplay('.clicktoshow', 'none');
+    }
+
+    function hideAll() {
+      setDisplay('.showable', 'none');
+      setDisplay('.clicktoshow', 'block');
+    }
+  </script>
+</head>
+<body id="toc2col">
+  <div id="main">
+    <!--header -->
+    <div id="header">
+      <a href="index.html"><img alt=""
+        src="images/logo.jpg" class="logo" width="289" height="80" /></a>
+      <img alt="" src="images/godoctor80.png" class="gopher" width="70" height="80" />
+      <br />
+      <div class="menu">
+        <div class="right_bg">
+          <div class="left_bg">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="dl.html">Downloads</a></li>
+              <li class="active"><a href="doc.html">Documentation</a></li>
+              <li class="last"><a href="contrib.html">Contributing</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--header end-->
+    <div id="middle">
+      <div class="container">
+        <div class="column1">
+          <div class="box">
+            <div class="corner_bottom_left">
+              <div class="corner_top_right">
+                <div class="corner_top_left">
+                  <div class="indent">
+                    {{.TOC}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="indent">
+            {{.Content}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer -->
+    <div id="footer">
+      <span class="privacy">&copy; 2015 <a target="_blank" class="copyright"
+                      href="http://www.auburn.edu">Auburn
+                      University</a>.</span>
+    </div>
+    <!--footer end-->
+  </div>
+</body>
+</html>

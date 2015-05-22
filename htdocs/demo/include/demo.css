@@ -1,0 +1,124 @@
+html { 
+  background-color: black;
+}
+a {
+  color: #3c78a1;
+  text-decoration: none;
+  border-bottom: 1px dotted #0060c0;
+}
+a:hover {
+  color: #3c78a1;
+  text-decoration: none;
+  border-bottom: 1px dotted #0060c0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: .5em 0 .5em 1.5em; /* Top Right Bottom Left */
+    width: 88%;
+}
+li { 
+    padding-left: 1em; 
+    text-indent: -2em;
+    text-align: left; /*justify;*/
+    margin-bottom: .5em;
+}
+li:before {
+    content: "\00bb"; /* Right guillemet */
+    padding-right: .5em;
+    color: #0080c0;
+}
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana, Arial, sans-serif;
+  /*font-size: 85%; Per http://www.w3schools.com/css/css_font.asp */
+  font-size: 10pt; /* Per http://www.w3schools.com/css/css_font.asp */
+}
+div#body {
+  font-size: 1em;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  right: 5px;
+  bottom: 20px;
+  padding: 0px;
+}
+div#menuBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 22px;
+  padding: 0px;
+  background: black;
+  color: white;
+}
+div#menuBar .popout {
+  float: right;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: 8pt;
+  padding: 2px 24px;
+  border: 0px;
+}
+div#editor {
+  position: absolute;
+  top: 23px;
+  left: 0px;
+  right: 0px;
+  bottom: 25%;
+  padding: 0px;
+  border: 0px;
+  color: #ffffff; /* Text should not be visible until editor loads */
+}
+div#rightSide {
+  position: absolute;
+  top: 75%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 20px;
+  background-color: #202020;
+  color: white;
+  overflow: auto;
+}
+div#logo {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 406px;
+  height: 109px;
+}
+p.description {
+  color: #808080;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 9pt; /* Per http://www.w3schools.com/css/css_font.asp */
+}
+td.tdtl {
+  text-align: left;
+  vertical-align: top;
+}
+span.error {
+  color: red;
+  font-weight: bold;
+  font-size: 9pt;
+}
+span.error {
+  color: red;
+  font-weight: bold;
+  font-size: 9pt;
+}
+span.warning {
+  color: orange;
+  font-size: 9pt;
+}
+span.info {
+  color: #c0c0c0;
+  font-size: 9pt;
+}
+span.message {
+  color: white;
+  font-size: 9pt;
+}

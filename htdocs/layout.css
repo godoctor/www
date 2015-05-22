@@ -1,0 +1,37 @@
+#main { width:838px; margin:0 auto; text-align:left;}
+
+#header {height:151px; background:url("images/header_bg.gif") top left no-repeat;}
+
+#footer { height:115px; line-height:4em; padding-right:7px; background:url("images/footer_bg.gif") top left no-repeat;}
+
+.column1, .column2, .column3, .col1, .col2, .col3 {float:left;}
+.container {width:100%; overflow:hidden;}
+
+/* ============================= index ===========================*/
+
+#index .column1 {width:567px; padding:10px 0 10px 0;}
+#index .column2 {width:271px; padding:31px 0 33px 0;}
+
+#index .box .column1 {width:280px; padding:0;}
+#index .box .column2 {width:278px; padding:0;}
+#index .box .column3 {width:252px;}
+
+#index #demo {width:530px; height:400px;}
+#index #demoiframe {padding: 5px 5px 5px 5px; width:520px; height:380px;}
+
+/* ============================ topic ============================*/
+
+#topic .fullcolumn {width:538px; padding:20px 150px 20px 150px; font-size:1.091em;}
+#topic p {margin-left: 12px; text-align: justify;}
+#topic .whitectrfullcol {width:778px; margin:20px 20px 20px 20px; padding: 10px 10px 10px 10px;}
+
+/* =========================== toc2col ===========================*/
+
+#toc2col .column1 {width:210px; padding:31px 0 33px 0;}
+#toc2col .column2 {width:628px; padding:10px 0 10px 0;}
+#toc2col #dociframe {padding: 5px 5px 5px 5px; width:590px; height:380px;}
+
+/* =========================== dl2col ===========================*/
+
+#dl2col .column1 {width:628px; padding:10px 0 10px 0;}
+#dl2col .column2 {width:210px; padding:31px 0 33px 0;}

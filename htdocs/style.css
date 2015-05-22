@@ -1,0 +1,151 @@
+/* CSS Document */
+
+* {
+	margin:0; padding:0;
+	font-size:100%;
+}
+
+body{
+	background:#151515;
+	text-align:center;
+}
+
+img {vertical-align:top;}
+a img { border:0;}
+
+ul { list-style:none;}
+
+.left { float:left;}
+.right {float:right;}
+.clear  { clear:both;}
+
+
+html, input, textarea
+	{
+		font-family:Arial;
+		font-size:0.688em;
+		line-height:1.364em;
+		color:#9aa6af;
+	}
+
+input, select { vertical-align:middle; font-weight:normal;}
+
+iframe { border: 0; }
+
+a {color:#3c78a1;}
+a:hover{text-decoration:none;}
+p {padding-top:15px;}
+
+/* ============================= main layout ====================== */
+
+.link {font-weight:bold; font-size:1.091em; line-height:1.5em;}
+.date {color:#d8e0e5; background:url("images/date_bg.gif") no-repeat 0 1px; padding-left:18px; display:block; margin-bottom:9px;}
+
+h1 {font-size:2.046em; color:#b0c9da; font-weight:normal; padding:0 0 0px 12px;}
+
+h2 {text-align:center; font-size:1.636em; line-height:1em; color:#b0c9da; background:url("images/h2_bg.gif") bottom left repeat-x; font-weight:normal; padding:0 0 7px 0; margin-top: 20px;}
+
+h3 {text-align:left; font-size:1.2em; line-height:1em; color:#b0c9da; font-weight:bold; margin: 20px 0 5px 0;}
+
+li {background:url("images/list2_bg.gif") no-repeat 0 3px; padding: 2px 0 2px 20px;}
+li a {color:#B6BDC3; text-decoration:none; line-height:1.636em;}
+li a:hover {text-decoration:underline;}
+.box li { background:url("images/list_bg.gif") no-repeat 0 3px;}
+.box h2 { font-size:1.364em; margin-top:10px; }
+
+.list2 li {background:none; padding:0;}
+.list2 li a {color:#9aa6af; line-height:1.636em; text-decoration:underline;}
+.list2 li a:hover {text-decoration:none;}
+
+.enum li {margin-left:40px; background:none; padding-left:10px; padding-top:8px;}
+.enum li a {color:#9aa6af; line-height:1.636em; text-decoration:underline;}
+.enum li a:hover {text-decoration:none;}
+
+.people li {background:url("images/list2_bg.gif") no-repeat 0 10px; margin-left:40px; padding-left:20px; padding-top:8px;}
+.people li a {color:#9aa6af; line-height:1.636em; text-decoration:underline;}
+.people li a:hover {text-decoration:none;}
+
+.toc1 li { background:none; padding-left:0px; padding-top:20px; font-weight: bold;}
+.toc2 li { background:url("images/list2_bg.gif") no-repeat 0 3px; padding-left:20px; padding-top:2px; padding-bottom:2px; font-weight: normal; }
+
+.imgindent {margin:0 20px 0 0; float:left;}
+.title {margin-bottom:20px;}
+.button {margin-top:12px;}
+
+/* ============================= header ====================== */
+
+.logo {margin-top:47px;}
+.gopher {margin-top:47px;}
+
+.menu {background:url("images/menu_tall_bg.gif") top repeat-x;}
+.menu ul {float:left;}
+.menu .right_bg {background:url("images/menu_right_bg.gif") top right no-repeat;}
+.menu .left_bg {background:url("images/menu_left_bg.gif") top left no-repeat; height:24px; width:100%;}
+/* 840 px total */
+.menu li {background:url("images/menu_line.gif") top right no-repeat; width:210px; padding:4px 0; margin:0; text-align:center; float:left;}
+.menu li a {color:#7c7d7d; font-size:1.091em; line-height:1.25em;}
+.menu li a:hover {color:#b0c9da; text-decoration:none;}
+.menu .active a {color:#b0c9da;}
+.menu .last {background:none; width:179px;}
+.menu .last_active {background:none; width:179px;}
+.menu .last_active a {color:#b0c9da;}
+
+/* ============================= middle ====================== */
+
+#middle {background:url("images/middle_bg.jpg") top left no-repeat;}
+#index #middle {background:url("images/middle_bg.jpg") top left no-repeat;}
+#topic #middle {background:url("images/middle_bg.jpg") top left no-repeat;}
+#index_3 #middle {background:url("images/page2_middle_bg.jpg") top left no-repeat;}
+.middle_bot {background:url("images/middle2_bg.jpg") bottom left no-repeat;}
+.banner {margin-bottom:15px;}
+.column_padding {margin-right:27px;}
+.col_pad {margin-right:20px;}
+.col_pad2 {margin-right:68px;}
+.col_pad3 {margin-right:45px;}
+.p {padding-top:9px;}
+.double_p {padding-top:30px;}
+.ul {margin-top:10px;}
+.phone {float:right; margin-right:77px;}
+
+.indent {padding:21px 0 10px 25px;}
+.indent2 {padding:41px 0 50px 0;}
+.indent3 {padding:41px 25px 38px 25px;}
+.box {background:#060606 url("images/box_corner_bottom_right.gif") bottom right no-repeat;}
+.box .corner_bottom_left {background:url("images/box_corner_bottom_left.gif") bottom left no-repeat;}
+.box .corner_top_right {background:url("images/box_corner_top_right.gif") top right no-repeat;}
+.box .corner_top_left {background:url("images/box_corner_top_left.gif") top left no-repeat; width:100%;}
+.box .indent {padding:23px 14px 28px 14px;}
+.box .padding {padding:0 10px 0 12px;}
+
+.upper {text-transform:uppercase; color:#efefef; font-size:1.182em; line-height:1.154em;}
+.big {font-size:1.091em; color:#efefef;}
+.center {text-align:center;}
+.download {float:right; margin-left:66px;}
+.list {line-height:2.273em; margin:10px 10px 0 0;}
+.usual {color:#9aa6af;}
+
+#topic .whitectrfullcol {text-align:center; background-color:#ffffff; color:#000000; border: 1px dotted #808080;}
+#topic .whitectrfullcol h1 {font-size:2.046em; color:#000000; font-weight:bold; padding:10px 0 20px 0px;}
+#topic .whitectrfullcol p {font-size:1.25em; color:#000000; padding:20px 90px 20px 90px;}
+
+/* ============================= footer ====================== */
+
+#index_6 #footer {background:url("images/footer2_bg.jpg") top left no-repeat;}
+.privacy {float:right;}
+.privacy span {color:#3b4042;}
+.privacy a {color:#ffffff; text-decoration:none;}
+.privacy a:hover {color:#ffffff; text-decoration:underline;}
+.navigation {color:#3c78a1;}
+.navigation a {margin:0 9px;}
+
+/* ============================= form ============================= */
+
+form .rowi {height:26px;}
+form .buttons input {margin:15px 0 0 18px; float:right;}
+#index_5 form {padding:15px 0 0 0;}
+
+#index .input {width:195px; height:17px; border:1px solid #262b2f; background:#1f2428; padding:0 0 0 5px; font-size:1em; margin:10px 0 12px 0; color:#9aa6af;}
+.input {width:133px; height:17px; border:1px solid #b4b4b4; padding:0 0 0 5px; font-size:1em; color:#191919;}
+
+textarea {width:204px; height:69px; border:1px solid #b4b4b4; padding:0 0 0 5px; overflow:auto; font-size:1em; color:#191919;}
+

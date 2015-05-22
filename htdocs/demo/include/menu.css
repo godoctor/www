@@ -1,0 +1,61 @@
+/*
+ menu styles
+ note: not all browsers render styles the same way so try out your style sheet
+ in different browsers before publishing
+*/
+
+/* level 0 inner */
+.m0l0iout {
+	font-family: sans-serif, Tahoma, Verdana, Geneva, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 4px 0 0 8px;
+	color: #c0c0c0;
+}
+.m0l0iover {
+	font-family: sans-serif, Tahoma, Verdana, Geneva, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 5px 0 0 8px;
+	color: #ffffff;
+}
+
+/* level 0 outer */
+.m0l0oout {
+	text-decoration : none;
+	background-color: black;
+}
+.m0l0oover {
+	text-decoration : none;
+	background-color: #1A4D81;
+}
+
+/* level 1 inner */
+.m0l1iout {
+	font-family: sans-serif, Tahoma, Verdana, Geneva, Arial, Helvetica;
+	font-size: 12px;
+	margin: 4px 0 0 17px;
+	color: #c0c0c0;
+}
+.m0l1iover {
+	font-family: sans-serif, Tahoma, Verdana, Geneva, Arial, Helvetica;
+	font-size: 12px;
+	margin: 4px 0 0 17px;
+	color: #ffffff;
+}
+
+/* level 1 outer */
+.m0l1oout {
+	text-decoration : none;
+	background-color: #202020;
+	padding: 0;
+}
+.m0l1oover {
+	text-decoration : none;
+	background-color: #1A4D81;
+	/*background-image: url(img/lev1_arrow.gif);*/
+	background-repeat: no-repeat;
+	padding: 0;
+}
