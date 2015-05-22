@@ -37,7 +37,7 @@ function onClickOpenExample() {
             html += '<select id="filename" onChange="onChangeFilename()">\n';
             for (var i = 0; i < files.length; i++) {
                 var filename = files[i];
-                var name = filename.replace(/\.go$/, '');
+                var name = filename.replace(/\.go\.txt$/, '');
                 if (filename != "") {
                     html += '  <option value="'+filename+'">'+name+'</option>\n';
                 }

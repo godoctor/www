@@ -24,15 +24,15 @@ import (
 
 const ABOUT = "Go Doctor"
 
-const HTDOCS_DIR = "../htdocs"
+const HTDOCS_DIR = "htdocs"
 
-const MAN_PAGE_HTML = "../generated/godoctor.1.html"
+const MAN_PAGE_HTML = "generated/godoctor.1.html"
 
-const VIMDOC_HTML = "../generated/godoctor-vim.txt.html"
+const VIMDOC_HTML = "generated/godoctor-vim.txt.html"
 
-const DOC_HTML_TEMPLATE = "../htdocs/doc.html"
+const DOC_HTML_TEMPLATE = "htdocs/doc.html"
 
-const EXAMPLES_DIR = "../htdocs/demo/examples"
+const EXAMPLES_DIR = "htdocs/demo/examples"
 
 // Strings that can be substituted into doc.html
 type userGuide struct {
@@ -124,7 +124,7 @@ func ls(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "text/plain")
 	for _, fi := range fileInfos {
-		if !fi.IsDir() && filepath.Ext(fi.Name()) == ".go" {
+		if !fi.IsDir() && filepath.Ext(fi.Name()) == ".txt" {
 			fmt.Fprintln(w, fi.Name())
 		}
 	}
