@@ -48,17 +48,18 @@ var cachedDocHTML struct {
 
 func init() {
 	// Set the GOPATH to prevent Go Doctor warnings
-	os.Setenv("GOPATH", os.TempDir())
-
-	// Point the Go Doctor to a local copy of the Go standard library
-	// since $GOROOT is not readable on Google's App Engine servers
+	// Point the Go Doctor to local fmt and math packages (for the example
+	// programs in the online demo) since $GOROOT is not readable on
+	// Google's App Engine servers
 	cwd, err := os.Getwd()
 	if err == nil {
-		os.Setenv("GOROOT", filepath.Join(cwd, "go"))
+		os.Setenv("GOPATH", filepath.Join(cwd, "go"))
+	} else {
+		os.Setenv("GOPATH", os.TempDir())
 	}
 
 	cacheDocHTML()
-	http.HandleFunc("/exe/goenv", goenv)
+	http.HandleFunc("/exe/gopath", gopath)
 	http.HandleFunc("/exe/ls", ls)
 	http.HandleFunc("/exe/godoctor", godoctor)
 	http.HandleFunc("/doc.html", docHTML)
@@ -125,11 +126,10 @@ func extractBetween(s, from, to string) string {
 	return s[i+len(from) : j]
 }
 
-// goenv displays the GOPATH environment variable
-func goenv(w http.ResponseWriter, r *http.Request) {
+// gopath displays the GOPATH environment variable
+func gopath(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 	fmt.Fprintln(w, os.Getenv("GOPATH"))
-	fmt.Fprintln(w, os.Getenv("GOROOT"))
 }
 
 // ls lists the example files, one per line.
