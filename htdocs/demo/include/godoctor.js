@@ -245,33 +245,63 @@ function transform(shortName) {
         }
     }
 
-    startObj = {row:editor.getSelectionRange().start.row, column:editor.getSelectionRange().start.column};
-    endObj = {row:editor.getSelectionRange().end.row, column:editor.getSelectionRange().end.column};
-    offset = editor.getSession().getDocument().positionToIndex(startObj, 0);
-    end = editor.getSession().getDocument().positionToIndex(endObj, 0);
-
-
+    selRange = editor.getSelectionRange();
+    doc = editor.getSession().getDocument();
+    startObj = { row:    selRange.start.row,
+                 column: selRange.start.column};
+    endObj   = { row:    selRange.end.row,
+                 column: selRange.end.column};
+    startIdx = doc.positionToIndex(startObj, 0);
+    endIdx = doc.positionToIndex(endObj, 0);
+    fullText = doc.getValue()
+    textBefore = fullText.substring(0, startIdx);
+    offset = numUTF8Bytes(textBefore);
+    selectedText = fullText.substring(startIdx, endIdx);
+    length = numUTF8Bytes(selectedText);
     cmd = {"command":"xrun",
             "transformation":shortName,
             "mode":"text",
             "textselection":{
                 "filename":"-.go",
                 "offset":offset,
-                "length":end - offset
+                "length":length
             },
         "arguments":args};
+    //alert(JSON.stringify(cmd));
+
     /*
-    for (i = 0; i < args.length; i++) {
-        if (i > 0) {
-            cmdString += ",";
-        }
-        cmdString += args[i];
+    var startline = editor.getSelectionRange().start.row+1;
+    var startcol = editor.getSelectionRange().start.column+1;
+    var endline = editor.getSelectionRange().end.row+1;
+    var endcol = editor.getSelectionRange().end.column+1;
+    // ACE's selection is exclusive; the Go Doctor's is inclusive
+    if (endcol > 1) {
+        endcol--;
+    } else {
+        endline--;
+        var line = editor.getSession().getDocument().getLine(endline-1);
+        endcol = line.length+1;
     }
+
+    cmd = {"command":"xrun",
+            "transformation":shortName,
+            "mode":"text",
+            "textselection":{
+                "filename":"-.go",
+                "startline":startline,
+                "startcol":startcol,
+                "endline":endline,
+                "endcol":endcol
+            },
+        "arguments":args};
+    //alert(JSON.stringify(cmd));
     */
+
     transCmd = [{"command":"setdir","mode":"web"},
                 {"command":"put","filename":"-.go","content":editor.getValue()},
                 cmd];
     //alert(JSON.stringify(transCmd));
+
     $.ajax({
         url: '/exe/godoctor',
         type: 'POST',
@@ -281,7 +311,10 @@ function transform(shortName) {
         dataType: 'json',
         data: JSON.stringify(transCmd),
         success: function(data) {
-            //alert(JSON.stringify(data));
+            if (data.reply == "Error") {
+                alert(data.message);
+                return;
+            }
             showLog(data.log);
             try {
                 editor.setValue(data.files[0].content);
@@ -295,6 +328,16 @@ function transform(shortName) {
             alertError('xrun', xhr);
         }
     });
+}
+
+/*
+    Returns the number of bytes in the UTF-8 encoding of a string.
+    http://stackoverflow.com/questions/5515869/string-length-in-bytes-in-javascript
+*/
+function numUTF8Bytes(str) {
+    // Matches only the 10.. bytes that are non-initial characters in a multi-byte sequence.
+    var m = encodeURIComponent(str).match(/%[89ABab]/g);
+    return str.length + (m ? m.length : 0);
 }
 
 /*
