@@ -42,7 +42,7 @@ div#body {
   left: 5px;
   right: 5px;
   bottom: 20px;
-  padding: 0px;
+  padding: 0px 0px 0px 0px;
 }
 div#menuBar {
   position: absolute;
@@ -50,7 +50,7 @@ div#menuBar {
   left: 0px;
   right: 0px;
   height: 22px;
-  padding: 0px;
+  padding: 0px 0px 0px 0px;
   background: black;
   color: white;
 }
@@ -69,7 +69,7 @@ div#editor {
   left: 0px;
   right: 0px;
   bottom: 25%;
-  padding: 0px;
+  padding: 0px 0px 0px 0px;
   border: 0px;
   color: #ffffff; /* Text should not be visible until editor loads */
 }
@@ -79,7 +79,7 @@ div#rightSide {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  padding: 20px;
+  padding: 10px 10px 10px 10px;
   background-color: #202020;
   color: white;
   overflow: auto;

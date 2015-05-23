@@ -41,7 +41,7 @@ p {padding-top:15px;}
 .link {font-weight:bold; font-size:1.091em; line-height:1.5em;}
 .date {color:#d8e0e5; background:url("images/date_bg.gif") no-repeat 0 1px; padding-left:18px; display:block; margin-bottom:9px;}
 
-h1 {font-size:2.046em; color:#b0c9da; font-weight:normal; padding:0 0 0px 12px;}
+h1 {text-align:center; font-size:2.046em; color:#b0c9da; font-weight:bold; padding:12px 0 12px 0px;}
 
 h2 {text-align:center; font-size:1.636em; line-height:1em; color:#b0c9da; background:url("images/h2_bg.gif") bottom left repeat-x; font-weight:normal; padding:0 0 7px 0; margin-top: 20px;}
 
@@ -106,6 +106,26 @@ li a:hover {text-decoration:underline;}
 .double_p {padding-top:30px;}
 .ul {margin-top:10px;}
 .phone {float:right; margin-right:77px;}
+
+.documentation {
+  font-size:11pt;
+  line-height:15pt;
+  font-family:Georgia,"Times New Roman",Serif;
+  color:#d0d0d0;
+}
+
+.vimdoc {
+  font-size:9pt;
+}
+
+.documentation li { margin-top: 8px; }
+.documentation h1 { text-align: center; color:#3c78a1; font-family:Arial; font-weight: bold; }
+.documentation h2 { padding-top: 20px; color:#3c78a1; font-family:Arial; }
+.documentation h3 { padding-top: 20px; color:#3c78a1; font-family:Arial; }
+.documentation h4 { padding-top: 15px; color:#3c78a1; font-family:Arial; }
+.documentation h5 { padding-top: 15px; color:#3c78a1; font-family:Arial; }
+.documentation th { padding-top: 15px; color:#3c78a1; font-family:Arial; }
+.highlight { color:#ffffff; background-color:#1E3C50; }
 
 .indent {padding:21px 0 10px 25px;}
 .indent2 {padding:41px 0 50px 0;}

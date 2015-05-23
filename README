@@ -10,5 +10,5 @@
 	Vim plugin documentation and convert it to HTML (using groff and vim,
 	respectively)
 
-3. cd appengine && goapp serve
+3. goapp serve
 	Run the local (development) App Engine server

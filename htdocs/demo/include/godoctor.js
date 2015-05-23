@@ -97,8 +97,11 @@ function openExample(filename) {
 */
 function showDescription() {
     html = '<p class="description">Type a Go program above, or click <b>File '+
-           '&gt; Open Example</b> to load an example program.  Then, click '+
-       '<b>Refactor</b> to try a refactoring.</p>';
+           '&gt; Open Example</b>; then, click <b>Refactor</b>.'+
+           '<br/><br/>'+
+           'Note: Only the "fmt", "math", and "math/rand" packages are '+
+           'available in this Web demonstration (the full Go Doctor tool '+
+           'does not have this limitation).</p>';
     $('#rightSide').html(html);
 }
 

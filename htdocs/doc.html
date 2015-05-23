@@ -7,15 +7,14 @@
   <link href="layout.css" rel="stylesheet" type="text/css" />
   <style type="text/css">
     .clicktoshow {
-      display: show;
-      //float: right;
+      display: none;
       font-size: 10px;
       font-weight: normal;
       color: #808080;
     }
 
     .showable {
-      display: none;
+      display: show;
     }
 
     .man h1 {
@@ -111,7 +110,9 @@
         </div>
         <div class="column2">
           <div class="indent">
-            {{.Content}}
+            <div class="documentation">
+              {{.Content}}
+            </div>
           </div>
         </div>
       </div>
