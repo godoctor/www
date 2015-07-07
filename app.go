@@ -30,6 +30,8 @@ const MAN_PAGE_HTML = "generated/godoctor.1.html"
 
 const VIMDOC_HTML = "generated/godoctor-vim.txt.html"
 
+const INSTALL_HTML_TEMPLATE = "htdocs/install.html"
+
 const DOC_HTML_TEMPLATE = "htdocs/doc.html"
 
 const EXAMPLES_DIR = "htdocs/demo/examples"
@@ -40,10 +42,12 @@ type userGuide struct {
 	Content string
 }
 
-// Cached contents of doc.html after substitution (see cacheDocHTML)
-var cachedDocHTML struct {
-	content string
-	err     error
+// Cached contents of doc.html or install.html after substitution
+// (see cacheDocHTML and cacheInstallHTML)
+var cachedHTML struct {
+	docContent     string
+	installContent string
+	err            error
 }
 
 func init() {
@@ -58,11 +62,38 @@ func init() {
 	}
 
 	cacheDocHTML()
+	cacheInstallHTML()
 	http.HandleFunc("/exe/goenv", goenv)
 	http.HandleFunc("/exe/ls", ls)
 	http.HandleFunc("/exe/godoctor", godoctor)
 	http.HandleFunc("/doc.html", docHTML)
+	http.HandleFunc("/install.html", installHTML)
 	http.Handle("/", http.FileServer(http.Dir(HTDOCS_DIR)))
+}
+
+// cacheInstallHTML embeds the Installation Guide into the htdocs/install.html
+// template and then saves the result in memory.  This avoids file I/O on every
+// HTTP request.
+func cacheInstallHTML() {
+	installBytes, err := ioutil.ReadFile(INSTALL_HTML_TEMPLATE)
+	if err != nil {
+		cachedHTML.err = err
+		return
+	}
+
+	var b bytes.Buffer
+	doc.PrintInstallGuide(ABOUT, cli.Flags().FlagSet, &b)
+	userGuide := extractFrom(b.String())
+
+	t := template.Must(template.New("install").Parse(string(installBytes)))
+	var result bytes.Buffer
+	err = t.Execute(&result, userGuide)
+	if err != nil {
+		cachedHTML.err = err
+		return
+	}
+
+	cachedHTML.installContent = result.String()
 }
 
 // cacheDocHTML embeds the User's Guide into the htdocs/doc.html template and
@@ -71,19 +102,19 @@ func init() {
 func cacheDocHTML() {
 	docBytes, err := ioutil.ReadFile(DOC_HTML_TEMPLATE)
 	if err != nil {
-		cachedDocHTML.err = err
+		cachedHTML.err = err
 		return
 	}
 
 	manBytes, err := ioutil.ReadFile(MAN_PAGE_HTML)
 	if err != nil {
-		cachedDocHTML.err = err
+		cachedHTML.err = err
 		return
 	}
 
 	vimBytes, err := ioutil.ReadFile(VIMDOC_HTML)
 	if err != nil {
-		cachedDocHTML.err = err
+		cachedHTML.err = err
 		return
 	}
 
@@ -98,11 +129,11 @@ func cacheDocHTML() {
 	var result bytes.Buffer
 	err = t.Execute(&result, userGuide)
 	if err != nil {
-		cachedDocHTML.err = err
+		cachedHTML.err = err
 		return
 	}
 
-	cachedDocHTML.content = result.String()
+	cachedHTML.docContent = result.String()
 }
 
 func extractFrom(html string) userGuide {
@@ -173,10 +204,21 @@ func drainBody(b io.ReadCloser) (string, error) {
 
 // docHTML embeds the User's Guide into the htdocs/doc.html template.
 func docHTML(w http.ResponseWriter, r *http.Request) {
-	if cachedDocHTML.err != nil {
-		http.Error(w, cachedDocHTML.err.Error(),
+	if cachedHTML.err != nil {
+		http.Error(w, cachedHTML.err.Error(),
 			http.StatusInternalServerError)
 	}
 	w.Header().Set("Content-Type", "text/html")
-	fmt.Fprintln(w, cachedDocHTML.content)
+	fmt.Fprintln(w, cachedHTML.docContent)
+}
+
+// installHTML embeds the Installation Guide into the htdocss/install.html
+// template.
+func installHTML(w http.ResponseWriter, r *http.Request) {
+	if cachedHTML.err != nil {
+		http.Error(w, cachedHTML.err.Error(),
+			http.StatusInternalServerError)
+	}
+	w.Header().Set("Content-Type", "text/html")
+	fmt.Fprintln(w, cachedHTML.installContent)
 }

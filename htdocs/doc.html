@@ -5,70 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="layout.css" rel="stylesheet" type="text/css" />
-  <style type="text/css">
-    .clicktoshow {
-      display: none;
-      font-size: 10px;
-      font-weight: normal;
-      color: #808080;
-    }
-
-    .showable {
-      display: show;
-    }
-
-    .man h1 {
-      text-align: center;
-      font-size: 1.8em;
-      line-height: 1em;
-      font-weight: bold;
-      padding: 3px 0 3px 0;
-      margin-top: 5px;
-    }
-
-    .man h2 {
-      text-align: left;
-      font-size: 1.4em;
-      line-height: 1em;
-      font-weight: bold;
-      padding: 3px 0 3px 0;
-      margin-top: 20px;
-    }
-
-    .vimdoc { font-family: monospace; color: #d0d0d0; }
-    .vimdoc pre { white-space: pre-wrap; font-family: monospace; color: #d0d0d0; }
-    .Identifier { color: #ff8700; font-weight: bold; }
-    .Ignore { color: #808080; padding-bottom: 1px; }
-    .PreProc { color: #87ff00; }
-    .String { color: #afaf87; }
-    .Comment { color: #5f5f5f; }
-    .Statement { color: #d7005f; font-weight: bold; }
-  </style>
-  <script language="JavaScript">
-    function setDisplay(selectors, value) {
-      var divs = document.querySelectorAll(selectors);
-      for (var i = 0; i < divs.length; i++) {
-        divs[i].style.display = value;
-      }
-    }
-
-    function show(id) {
-      setDisplay('.showable', 'none');
-      setDisplay('.clicktoshow', 'block');
-      document.getElementById(id).style.display = 'block';
-      document.getElementById(id + '-click').style.display = 'none';
-    }
-
-    function showAll() {
-      setDisplay('.showable', 'block');
-      setDisplay('.clicktoshow', 'none');
-    }
-
-    function hideAll() {
-      setDisplay('.showable', 'none');
-      setDisplay('.clicktoshow', 'block');
-    }
-  </script>
+  <script language="JavaScript" src="show-hide.js"></script>
 </head>
 <body id="toc2col">
   <div id="main">
@@ -83,7 +20,7 @@
           <div class="left_bg">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="dl.html">Downloads</a></li>
+              <li><a href="install.html">Installation</a></li>
               <li class="active"><a href="doc.html">Documentation</a></li>
               <li class="last"><a href="contrib.html">Contributing</a></li>
             </ul>

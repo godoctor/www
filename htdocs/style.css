@@ -169,3 +169,42 @@ form .buttons input {margin:15px 0 0 18px; float:right;}
 
 textarea {width:204px; height:69px; border:1px solid #b4b4b4; padding:0 0 0 5px; overflow:auto; font-size:1em; color:#191919;}
 
+/* ============================= doc ============================= */
+
+    .clicktoshow {
+      display: none;
+      font-size: 10px;
+      font-weight: normal;
+      color: #808080;
+    }
+
+    .showable {
+      display: show;
+    }
+
+    .man h1 {
+      text-align: center;
+      font-size: 1.8em;
+      line-height: 1em;
+      font-weight: bold;
+      padding: 3px 0 3px 0;
+      margin-top: 5px;
+    }
+
+    .man h2 {
+      text-align: left;
+      font-size: 1.4em;
+      line-height: 1em;
+      font-weight: bold;
+      padding: 3px 0 3px 0;
+      margin-top: 20px;
+    }
+
+    .vimdoc { font-family: monospace; color: #d0d0d0; }
+    .vimdoc pre { white-space: pre-wrap; font-family: monospace; color: #d0d0d0; }
+    .Identifier { color: #ff8700; font-weight: bold; }
+    .Ignore { color: #808080; padding-bottom: 1px; }
+    .PreProc { color: #87ff00; }
+    .String { color: #afaf87; }
+    .Comment { color: #5f5f5f; }
+    .Statement { color: #d7005f; font-weight: bold; }

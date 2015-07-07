@@ -1,10 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Downloads | Go Doctor - The Golang Refactoring Engine</title>
+  <title>Installation | Go Doctor - The Golang Refactoring Engine</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="layout.css" rel="stylesheet" type="text/css" />
+  <script language="JavaScript" src="show-hide.js"></script>
 </head>
 <body id="dl2col">
   <div id="main">
@@ -19,7 +20,7 @@
           <div class="left_bg">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="dl.html">Downloads</a></li>
+              <li class="active"><a href="install.html">Installation</a></li>
               <li><a href="doc.html">Documentation</a></li>
               <li class="last"><a href="contrib.html">Contributing</a></li>
             </ul>
@@ -33,7 +34,9 @@
       <div class="container">
         <div class="column1">
           <div class="indent">
-          TODO
+            <div class="documentation">
+              {{.Content}}
+            </div>
           </div>
         </div>
         <div class="column2">
@@ -42,22 +45,7 @@
               <div class="corner_top_right">
                 <div class="corner_top_left">
                   <div class="indent">
-                    <h2>Downloads</h2>
-                    <h3>Go Doctor 0.1 (Beta)</h3>
-                    <ul class="toc1">
-                      <li>Binaries</li>
-                      <ul class="toc2">
-                        <li><a href="TODO">Windows 64-bit (zip)</a></li>
-                        <li><a href="TODO">Windows 32-bit (zip)</a></li>
-                        <li><a href="TODO">Linux 64-bit (tar.gz)</a></li>
-                        <li><a href="TODO">Linux 32-bit (tar.gz)</a></li>
-                        <li><a href="TODO">Mac OS X 64-bit (tar.gz)</a></li>
-                      </ul>
-                      <li>Source Code</li>
-                      <ul class="toc2">
-                        <li><a href="TODO">Source Code (zip)</a></li>
-                      </ul>
-                    </ul>
+                    {{.TOC}}
                   </div>
                 </div>
               </div>
