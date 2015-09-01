@@ -68,14 +68,14 @@ div#editor {
   top: 23px;
   left: 0px;
   right: 0px;
-  bottom: 25%;
+  bottom: 30%;
   padding: 0px 0px 0px 0px;
   border: 0px;
   color: #ffffff; /* Text should not be visible until editor loads */
 }
 div#rightSide {
   position: absolute;
-  top: 75%;
+  top: 70%;
   left: 0px;
   right: 0px;
   bottom: 0px;

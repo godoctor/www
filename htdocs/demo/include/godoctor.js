@@ -97,7 +97,7 @@ function openExample(filename) {
 */
 function showDescription() {
     html = '<p class="description">Type a Go program above, or click <b>File '+
-           '&gt; Open Example</b>; then, click <b>Refactor</b>.'+
+           '&gt; Open Example</b>. Then click <b>Refactor</b>.'+
            '<br/><br/>'+
            'Note: Only the "fmt", "math", and "math/rand" packages are '+
            'available in this Web demonstration (the full Go Doctor tool '+
