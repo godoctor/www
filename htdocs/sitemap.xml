@@ -4,7 +4,20 @@
     <loc>http://www.gorefactor.org/</loc>
     <priority>1.0</priority>
   </url>
-  <url><loc>http://www.gorefactor.org/dl.html</loc></url>
-  <url><loc>http://www.gorefactor.org/doc.html</loc></url>
-  <url><loc>http://www.gorefactor.org/contrib.html</loc></url>
+  <url>
+    <loc>http://www.gorefactor.org/install.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.gorefactor.org/starting.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://www.gorefactor.org/doc.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>http://www.gorefactor.org/contrib.html</loc>
+    <priority>0.1</priority>
+  </url>
 </urlset>
