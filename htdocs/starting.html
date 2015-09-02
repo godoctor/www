@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>403 Forbidden</title>
+  <title>Getting Started | Go Doctor - The Golang Refactoring Engine</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="layout.css" rel="stylesheet" type="text/css" />
@@ -20,7 +20,7 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="install.html">Installation</a></li>
-              <li><a href="starting.html">Getting Started</a></li>
+              <li><a class="active" href="starting.html">Getting Started</a></li>
               <li><a href="doc.html">Documentation</a></li>
               <li class="last"><a href="contrib.html">Contributing</a></li>
             </ul>
@@ -31,15 +31,26 @@
     </div>
     <!--header end-->
     <div id="middle">
-      <div class="whitectrfullcol">
-        <h1>403 Forbidden</h1>
-        <div class="center"><img alt="403 Forbidden" src="images/403gopher.jpeg" /></div>
-        <p>We're sorry. If you've reached this 403 page, it means the link you
-        tried goes to a directory you don't have access to. Please click the
-        Back button, or go back to the <a
-        href="http://gorefactor.org/index.html">Go Doctor home page</a>.</p>
+      <div class="fullcolumn">
+        <h1>Getting Started</h1>
       </div>
-    </div>
+      <script language="JavaScript">
+        function show_video(url) {
+          document.getElementById('video').src = url;
+        }
+      </script>
+      <div style="text-align: center;">
+        <div style="text-align: left; margin: 0 auto; display: inline-block;">
+          <ul>
+            <li><a href="javascript:show_video('media/GoDoctor-Rename-Local.ogv');">Renaming a local variable</a> (0:48)</li>
+            <li><a href="javascript:show_video('media/GoDoctor-Rename-Func.ogv');">Renaming a function</a> (affecting several files)</li>
+            <li><a href="javascript:show_video('media/GoDoctor-Extract-Func.ogv');">Extracting a function</a></li>
+          </ul>
+        </div>
+        <p>&nbsp;</p>
+        <video id="video" src="media/GoDoctor-Rename-Local.ogv"
+            controls="controls"></video>
+      </div>
     <!--footer -->
     <div id="footer">
       <span class="privacy">&copy; 2015 <a target="_blank" class="copyright" href="http://www.auburn.edu">Auburn University</a>.</span>

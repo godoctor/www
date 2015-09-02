@@ -82,12 +82,12 @@ li a:hover {text-decoration:underline;}
 .menu .right_bg {background:url("images/menu_right_bg.gif") top right no-repeat;}
 .menu .left_bg {background:url("images/menu_left_bg.gif") top left no-repeat; height:24px; width:100%;}
 /* 840 px total */
-.menu li {background:url("images/menu_line.gif") top right no-repeat; width:210px; padding:4px 0; margin:0; text-align:center; float:left;}
+.menu li {background:url("images/menu_line.gif") top right no-repeat; width:168px; padding:4px 0; margin:0; text-align:center; float:left;}
 .menu li a {color:#7c7d7d; font-size:1.091em; line-height:1.25em;}
 .menu li a:hover {color:#b0c9da; text-decoration:none;}
 .menu .active a {color:#b0c9da;}
-.menu .last {background:none; width:179px;}
-.menu .last_active {background:none; width:179px;}
+.menu .last {background:none; width:137px;}
+.menu .last_active {background:none; width:137px;}
 .menu .last_active a {color:#b0c9da;}
 
 /* ============================= middle ====================== */
