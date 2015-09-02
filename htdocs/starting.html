@@ -5,6 +5,13 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="layout.css" rel="stylesheet" type="text/css" />
+  <script language="JavaScript">
+    function show_video(url) {
+      var video = document.getElementById('video');
+      video.src = url;
+      video.play();
+    }
+  </script>
 </head>
 <body id="topic">
   <div id="main">
@@ -33,24 +40,24 @@
     <div id="middle">
       <div class="fullcolumn">
         <h1>Getting Started</h1>
+        <p>After you have <a href="install.html">installed the Go Doctor</a>,
+        take a look at the following videos to see some typical usage
+        scenarios.  Then, delve into the <a href="doc.html">documentation</a>
+        for all the details.
       </div>
-      <script language="JavaScript">
-        function show_video(url) {
-          document.getElementById('video').src = url;
-        }
-      </script>
       <div style="text-align: center;">
         <div style="text-align: left; margin: 0 auto; display: inline-block;">
           <ul>
             <li><a href="javascript:show_video('media/GoDoctor-Rename-Local.ogv');">Renaming a local variable</a> (0:48)</li>
-            <li><a href="javascript:show_video('media/GoDoctor-Rename-Func.ogv');">Renaming a function</a> (affecting several files)</li>
-            <li><a href="javascript:show_video('media/GoDoctor-Extract-Func.ogv');">Extracting a function</a></li>
+            <li><a href="javascript:show_video('media/GoDoctor-Rename-Func.ogv');">Renaming a function (affecting several files)</a> (1:25)</li>
+            <li><a href="javascript:show_video('media/GoDoctor-Extract-Func.ogv');">Extracting a function</a> (0:34)</li>
           </ul>
         </div>
         <p>&nbsp;</p>
-        <video id="video" src="media/GoDoctor-Rename-Local.ogv"
-            controls="controls"></video>
+        <video id="video" width="640" height="360" src="media/GoDoctor-Select.ogv"
+            controls="controls" style="box-shadow: 5px 5px 5px #404040;"></video>
       </div>
+    </div>
     <!--footer -->
     <div id="footer">
       <span class="privacy">&copy; 2015 <a target="_blank" class="copyright" href="http://www.auburn.edu">Auburn University</a>.</span>
