@@ -4,19 +4,29 @@ runtime: go
 api_version: go1
 
 handlers:
-- url: /(doc|install)\.html
+- url: /doc\.html
+  script: _go_app
+- url: /install\.html
   script: _go_app
 - url: /exe/.*
   script: _go_app
-- url: /
-  static_files: htdocs/index.html
-  upload: htdocs/index.html
+- url: /demo/examples/(.*)
+  static_files: htdocs/demo/examples/\1
+  upload: htdocs/demo/examples/.*
+  application_readable: true
+  mime_type: text/plain
 - url: /demo/
   static_files: htdocs/demo/index.html
-  upload: htdocs/demo/index.html
+  upload: htdocs/.*
+  application_readable: true
+- url: /
+  static_files: htdocs/index.html
+  upload: htdocs/.*
+  application_readable: true
 - url: /(.*)
   static_files: htdocs/\1
   upload: htdocs/.*
+  application_readable: true
 
 nobuild_files:
 - ^(go)/
