@@ -22,7 +22,7 @@ import (
 	"github.com/godoctor/godoctor/engine/protocol"
 )
 
-const ABOUT = "Go Doctor 0.1 (Beta)"
+const ABOUT = "Go Doctor 0.3 (Beta)"
 
 const HTDOCS_DIR = "htdocs"
 

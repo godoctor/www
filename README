@@ -1,7 +1,7 @@
 			    GOREFACTOR.ORG WEB SITE
 		(including online documentation and online demo)
 
-1. go install github.com/godoctor/godoctor/cmd/godoctor
+1. go install github.com/godoctor/godoctor
 	Make sure the latest version of the Go Doctor is installed before
 	generating the man page in the next step.
 
@@ -12,3 +12,5 @@
 
 3. goapp serve
 	Run the local (development) App Engine server
+
+The version number is stored in app.go as well as in the Go Doctor's main.go.
