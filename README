@@ -3,14 +3,16 @@
 
 1. go install github.com/godoctor/godoctor
 	Make sure the latest version of the Go Doctor is installed before
-	generating the man page in the next step.
+	generating the man page below.
 
-2. cd generated && make && cd ..
+2. Update the version number in the ABOUT variable in app.go
+
+   The version number is stored in app.go as well as in Go Doctor's main.go.
+
+3. cd generated && make && cd ..
 	The Makefile will use the godoctor command to generate the man page and
 	Vim plugin documentation and convert it to HTML (using groff and vim,
 	respectively)
 
-3. goapp serve
+4. goapp serve
 	Run the local (development) App Engine server
-
-The version number is stored in app.go as well as in the Go Doctor's main.go.
