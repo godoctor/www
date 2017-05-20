@@ -1,4 +1,4 @@
-// Copyright 2015 Auburn University. All rights reserved.
+// Copyright Auburn University and others. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -22,7 +22,7 @@ import (
 	"github.com/godoctor/godoctor/engine/protocol"
 )
 
-const ABOUT = "Go Doctor 0.4 (Beta)"
+const ABOUT = "Go Doctor 0.5 (Beta)"
 
 const HTDOCS_DIR = "htdocs"
 

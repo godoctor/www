@@ -16,3 +16,4 @@
 
 4. goapp serve
 	Run the local (development) App Engine server
+	Browse to http://localhost:8080/ to view
